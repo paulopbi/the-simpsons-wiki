@@ -1,7 +1,11 @@
+import Header from './components/Header/Header.jsx'
+import Router from './Router'
+
 function App() {
   return (
     <>
-      <h1>Teste</h1>
+      <Header />
+      <Router />
     </>
   )
 }
