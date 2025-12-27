@@ -2,7 +2,7 @@
  * Will truncate a text if it exceeds the maxLength
  * @param {string} text `string`
  * @param {number} maxLength `number`
- * @returns {string}
+ * @returns {string} Truncated text with ellipsis if it exceeds maxLength
  */
 function truncateName(text, maxLength) {
   if (text.length <= maxLength) {
