@@ -1,8 +1,8 @@
-import './CharCard.css'
-import Card from '../Card/Card'
+import './CharactersList.css'
+import Card from '../../../components/Card/Card'
 import { useEffect, useState } from 'react'
 
-function CharCard() {
+function CharactersList() {
   const [characters, setCharacters] = useState(null)
 
   useEffect(() => {
@@ -26,4 +26,4 @@ function CharCard() {
   )
 }
 
-export default CharCard
+export default CharactersList

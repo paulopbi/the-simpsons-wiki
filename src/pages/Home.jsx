@@ -1,13 +1,7 @@
-import CharCard from '../components/CharCard/CharCard'
-import Hero from '../components/Hero/Hero'
+import HomeLayout from '../layout/Home/HomeLayout'
 
 function Home() {
-  return (
-    <>
-      <Hero />
-      <CharCard />
-    </>
-  )
+  return <HomeLayout />
 }
 
 export default Home
