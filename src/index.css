@@ -5,6 +5,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --color-title: #25333a;
+  --color-subtitle: #959595;
+  --color-accent: #ffcc00;
+  --color-black: #000
+  --color-white: #fff;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
 }
