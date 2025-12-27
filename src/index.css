@@ -8,14 +8,25 @@
 
 :root {
   --color-title: #25333a;
-  --color-subtitle: #959595;
+  --color-subtitle: #828282;
   --color-accent: #ffcc00;
   --color-black: #000
   --color-white: #fff;
+  --color-foreground: #f5f5f5;
 }
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
