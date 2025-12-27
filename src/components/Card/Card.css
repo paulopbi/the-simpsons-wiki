@@ -19,18 +19,6 @@
   border-top-right-radius: 8px;
 }
 
-.card__gender {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-weight: 500;
-  color: var(--color-black);
-  background-color: var(--color-accent);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
 .card__image-container {
   width: 100%;
   max-height: 300px;
@@ -52,10 +40,6 @@
 }
 
 .card__name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 14ch;
   color: var(--color-title);
 }
 

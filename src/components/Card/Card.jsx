@@ -1,11 +1,14 @@
 import { Link } from 'react-router'
 import './Card.css'
+import Badge from '../Badge/Badge'
+import truncateName from '../../util/truncateName'
 
 function Card({ data }) {
   const { id, gender, portrait_path, name, occupation, status } = data
   return (
     <Link className="card" to={`/character/${id}`}>
-      <span className="card__gender">{gender}</span>
+      <Badge>{gender}</Badge>
+
       <div className="card__image-container">
         <img
           src={`https://cdn.thesimpsonsapi.com/500${portrait_path}`}
@@ -13,11 +16,13 @@ function Card({ data }) {
         />
       </div>
 
-      <div className="card__content">
-        <h2 className="card__name">{name}</h2>
-        <p className="card__occupation">{occupation}</p>
-        <p className="card__status">{status}</p>
-      </div>
+      <ul className="card__content">
+        <li className="card__name">
+          <h2>{truncateName(name, 17)}</h2>
+        </li>
+        <li className="card__occupation">{truncateName(occupation, 60)}</li>
+        <li className="card__status">{status}</li>
+      </ul>
     </Link>
   )
 }
