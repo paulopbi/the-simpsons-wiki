@@ -11,6 +11,10 @@
 .header__title {
   text-align: center;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--color-black);
+}
+
+.header__title:hover {
+  text-decoration: underline;
 }

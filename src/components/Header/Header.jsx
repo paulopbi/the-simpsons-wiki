@@ -3,7 +3,9 @@ import './Header.css'
 function Header() {
   return (
     <header className="header">
-      <h1 className="header__title">The Simpsons Wiki</h1>
+      <a href="/" className="header__title">
+        The Simpsons Wiki
+      </a>
     </header>
   )
 }
