@@ -1,0 +1,11 @@
+.footer {
+  text-align: center;
+  padding: 12px 16px;
+  margin-top: 32px;
+  text-transform: capitalize;
+  background-color: var(--color-accent);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
