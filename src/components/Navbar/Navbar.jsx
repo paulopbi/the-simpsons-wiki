@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
-import './Header.css'
+import './Navbar.css'
 
-function Header() {
+function Navbar() {
   return (
     <header className="header">
       <nav className="nav container">
@@ -63,4 +63,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Navbar
