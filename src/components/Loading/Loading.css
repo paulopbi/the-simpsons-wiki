@@ -1,0 +1,29 @@
+.loading {
+  display: block;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background-color: var(--color-foreground);
+}
+
+.loading svg {
+  width: 90px;
+  height: 90px;
+  color: var(--color-yellow-500);
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
