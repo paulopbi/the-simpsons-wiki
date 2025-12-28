@@ -37,3 +37,15 @@ li {
   max-width: 1200px;
   margin-inline: auto;
 }
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-gray-900);
+}
+
+.description {
+  font-size: 1rem;
+  max-width: 50ch;
+  color: var(--color-gray-700);
+}
