@@ -1,28 +1,27 @@
 import { Link } from 'react-router'
 import './Card.css'
-import Badge from '../Badge/Badge'
-import truncateName from '../../util/truncateName'
+import truncateName from '../../utils/truncateName'
 
 function Card({ data }) {
-  const { id, gender, portrait_path, name, occupation, status } = data
+  const { id, portrait_path, name, gender, status } = data
+  console.log()
   return (
     <Link className="card" to={`/character/${id}`}>
-      <Badge>{gender}</Badge>
+      <span className="card__id"># {id}</span>
 
-      <div className="card__image-container">
+      <div className="card__image">
         <img
           src={`https://cdn.thesimpsonsapi.com/500${portrait_path}`}
           alt={name}
         />
       </div>
 
-      <ul className="card__content">
-        <li className="card__name">
-          <h2>{truncateName(name, 17)}</h2>
-        </li>
-        <li className="card__occupation">{truncateName(occupation, 60)}</li>
-        <li className="card__status">{status}</li>
-      </ul>
+      <div className="card__content">
+        <h2>{truncateName(name, 17)}</h2>
+        <p>
+          {gender} - {status}
+        </p>
+      </div>
     </Link>
   )
 }
