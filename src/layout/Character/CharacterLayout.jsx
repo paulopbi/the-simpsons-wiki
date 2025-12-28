@@ -1,9 +1,8 @@
-import './CharacterLayout.css'
-import Badge from '../../components/Badge/Badge'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { fetchCharacterById } from '../../services/api'
-import truncateText from '../../utils/truncateName'
+import './CharacterLayout.css'
+import Badge from '../../components/Badge/Badge'
 
 function CharacterLayout() {
   const { id } = useParams()
@@ -21,34 +20,37 @@ function CharacterLayout() {
     fetchCharacter()
   }, [])
 
+  console.log(character)
   return (
     <>
       {character ? (
         <section className="container">
           <article className="character">
-            <span className="character__id"># {id}</span>
-
             <div className="character__img-container">
               <img
                 src={`https://cdn.thesimpsonsapi.com/1280${portrait_path}`}
                 alt={name}
+                title={`Portrait of ${name}`}
+                loading="lazy"
               />
             </div>
 
-            <section className="character__header">
-              <h2>{name}</h2>
+            <span className="character__id"># {id}</span>
 
+            <section className="character__header">
               <div className="character__info">
+                <h2>{name}</h2>
+                <sup className="character__occupation">{occupation}</sup>
+              </div>
+
+              <div className="character__badges">
                 <Badge>Age: {age ? age : 'Unknow'}</Badge>
-                <Badge>Gender: {gender}</Badge>
-                <Badge>Status: {status}</Badge>
+                <Badge>Gender: {gender ? gender : 'Unknow'}</Badge>
+                <Badge>Status: {status ? status : 'Unknow'}</Badge>
               </div>
             </section>
 
-            <section className="character__text">
-              <p className="character__occupation">{occupation}</p>
-              <p className="character__description">{description}</p>
-            </section>
+            <p className="character__description">{description}</p>
           </article>
         </section>
       ) : (
