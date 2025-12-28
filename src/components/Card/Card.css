@@ -10,6 +10,11 @@
   transform: translateY(-8px);
 }
 
+.card:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
 .card:not(:hover) {
   opacity: 0.85;
 }
