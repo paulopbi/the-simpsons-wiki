@@ -7,9 +7,6 @@
 }
 
 :root {
-  --color-title: #25333a;
-  --color-subtitle: #828282;
-  --color-accent: #ffcc00;
   --color-black: #000
   --color-white: #fff;
   --color-foreground: oklch(98.5% 0.001 106.423);
@@ -51,9 +48,43 @@ li {
   list-style: none;
 }
 
+button {
+  font-family: inherit;
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 .container {
   max-width: 1200px;
   margin-inline: auto;
+}
+
+.alert-container {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn--primary {
+  color: var(--color-yellow-800);
+  background-color: var(--color-yellow-100);
+}
+
+.btn--primary:hover {
+  opacity: .8;
 }
 
 .title {
