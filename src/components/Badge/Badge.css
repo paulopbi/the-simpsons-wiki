@@ -1,11 +1,13 @@
 .badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  font-weight: 400;
+  font-size: 0.9rem;
   padding: 4px 8px;
   border-radius: 8px;
-  font-weight: 500;
-  color: var(--color-black);
-  background-color: var(--color-accent);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: var(--color-yellow-800);
+  border: 1px solid var(--color-yellow-800);
+  transition: all 0.3s ease;
+}
+
+.badge:not(:hover) {
+  opacity: 0.8;
 }
