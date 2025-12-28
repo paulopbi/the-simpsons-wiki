@@ -1,18 +1,12 @@
 import './Footer.css'
 
 function Footer() {
+  const currentYear = new Date().getFullYear()
   return (
     <footer className="footer">
       <p>
-        The Simpsons Wiki - created by{' '}
-        <a
-          href="https://www.linkedin.com/in/paulopbi/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Paulo Victor
-        </a>
-        .
+        © {currentYear} - The Simpsons Wiki, all data provided by The Simpsons
+        API.
       </p>
     </footer>
   )
