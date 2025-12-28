@@ -4,10 +4,10 @@ function Hero() {
   return (
     <section className="container ">
       <div className="hero">
-        <h1 className="title">Find Out</h1>
+        <h1 className="title">Your Springfield Encyclopedia</h1>
         <p className="description">
-          Explore <em>The Simpsons</em> universe and discover all the characters
-          that inhabit it.
+          Looking for a particular yellow resident? Search through hundreds of
+          Simpsons characters with detailed informations.
         </p>
       </div>
     </section>
