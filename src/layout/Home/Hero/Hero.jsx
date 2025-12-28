@@ -2,11 +2,14 @@ import './Hero.css'
 
 function Hero() {
   return (
-    <section className="container hero">
-      <h1 className="hero__title">Popular Characters</h1>
-      <p className="hero__text">
-        Meet some of the most iconic characters from Springfield.
-      </p>
+    <section className="container ">
+      <div className="hero">
+        <h1 className="title">Find Out</h1>
+        <p className="description">
+          Explore <em>The Simpsons</em> universe and discover all the characters
+          that inhabit it.
+        </p>
+      </div>
     </section>
   )
 }
