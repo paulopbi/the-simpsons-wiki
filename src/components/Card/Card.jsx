@@ -4,7 +4,7 @@ import truncateName from '../../utils/truncateName'
 
 function Card({ data }) {
   const { id, portrait_path, name, gender, status } = data
-  console.log()
+
   return (
     <Link className="card" to={`/character/${id}`}>
       <span className="card__id"># {id}</span>
