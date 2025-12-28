@@ -1,27 +1,75 @@
 import './CharactersList.css'
-import Card from '../../../components/Card/Card'
+
 import { useEffect, useState } from 'react'
 
+import Card from '../../../components/Card/Card'
+import Alert from '../../../components/Alert/Alert'
+
 function CharactersList() {
-  const [characters, setCharacters] = useState(null)
+  const [data, setData] = useState(null)
+  const [page, setPage] = useState(1)
+
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchCharacters = async (currentPage) => {
+      setLoading(true)
+      setError('')
+
       try {
-        const req = await fetch('https://thesimpsonsapi.com/api/characters')
-        const res = await req.json()
-        setCharacters(res)
+        const BASE_URL = `https://thesimpsonsapi.com/api/characters`
+
+        const request = await fetch(`${BASE_URL}?page=${currentPage}`)
+
+        if (!request.ok) {
+          throw new Error('Failed to find characters, please try again later.')
+        }
+
+        const response = await request.json()
+        setData(
+          data
+            ? { ...data, results: [...data.results, ...response.results] }
+            : response
+        )
       } catch (error) {
-        console.error(error)
+        if (error instanceof Error) {
+          console.error(error)
+          setError(error.message)
+        }
+      } finally {
+        setLoading(false)
       }
     }
-    fetchData()
-  }, [])
+
+    fetchCharacters(page)
+  }, [page])
 
   return (
-    <section className="container char-section">
-      {characters &&
-        characters.results.map((data) => <Card key={data.id} data={data} />)}
+    <section className="container">
+      {data && data.results.length > 0 && (
+        <div className="characters-list">
+          {data.results.map((character) => (
+            <Card key={character.id} data={character} />
+          ))}
+        </div>
+      )}
+
+      {error ? (
+        <div className="alert-container">
+          <Alert type="danger">{error}</Alert>
+        </div>
+      ) : (
+        <div className="button-container">
+          <button
+            className="btn btn--primary"
+            disabled={loading}
+            onClick={() => setPage((prev) => prev + 1)}
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </section>
   )
 }
