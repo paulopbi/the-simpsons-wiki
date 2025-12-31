@@ -1,5 +1,7 @@
-import { Link } from 'react-router'
 import './Card.css'
+
+import { Link } from 'react-router'
+
 import truncateName from '../../utils/truncateName'
 
 function Card({ data }) {
