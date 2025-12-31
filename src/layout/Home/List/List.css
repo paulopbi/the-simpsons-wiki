@@ -1,0 +1,16 @@
+.characters-list {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.5rem;
+  padding: 8px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 32px;
+}
