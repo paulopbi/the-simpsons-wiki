@@ -6,9 +6,9 @@ Utilizing _The Simpsons API_, discover everything you need to know about the wor
 
 ## Demo
 
-![Simpsons Demo Image](./assets/demo-image.png)
+https://github.com/user-attachments/assets/fc1b1859-1d47-44d9-a9ac-eb780603b4c1
 
-> Preview image.
+> Preview video.
 
 ## Tech Stack
 
